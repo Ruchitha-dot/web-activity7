@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL 2026 Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🏏 IPL 2026 Ticket Booking</h1>
+        <p>Book your favourite IPL match tickets!</p>
+    </header>
+
+    <main class="container">
+
+        <section class="booking-card">
+            <h2>🎟️ Book Your Tickets</h2>
+
+            <form id="bookingForm">
+
+                <label for="match">Select Match</label>
+                <select id="match" required>
+                    <option value="">-- Choose Match --</option>
+                    <option value="RCB vs CSK">RCB vs CSK</option>
+                    <option value="MI vs KKR">MI vs KKR</option>
+                    <option value="RCB vs MI">RCB vs MI</option>
+                    <option value="CSK vs SRH">CSK vs SRH</option>
+                </select>
+
+                <label for="stand">Stand Category</label>
+                <select id="stand" required>
+                    <option value="">-- Choose Stand --</option>
+                    <option value="General">General - ₹500</option>
+                    <option value="Premium">Premium - ₹1000</option>
+                    <option value="VIP">VIP - ₹2000</option>
+                </select>
+
+                <label for="quantity">Ticket Quantity</label>
+                <input type="number" id="quantity"
+                       min="1" max="10" value="1" required>
+
+                <button type="submit">Confirm Booking</button>
+
+            </form>
+        </section>
+
+        <section class="summary-card">
+            <h2>📋 Booking Summary</h2>
+
+            <div class="summary-item">
+                <span>Selected Match:</span>
+                <strong id="summaryMatch">Not Selected</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Stand Category:</span>
+                <strong id="summaryStand">Not Selected</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Ticket Quantity:</span>
+                <strong id="summaryQuantity">1</strong>
+            </div>
+
+            <hr>
+
+            <div class="total">
+                <span>Total Price:</span>
+                <strong>₹<span id="totalPrice">0</span></strong>
+            </div>
+
+            <p id="toast"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 IPL Ticket Booking | All Rights Reserved</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
